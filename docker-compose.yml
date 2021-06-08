@@ -1,13 +1,21 @@
-version: "3.9"
+version: "3.0"
 services:
   repo:
-    build: 
-    ports:
-      - "5000:5000"
+    build:
+      context: repository
+      dockerfile: Dockerfile
     image: "scrap-repo"
+    depends_on:
+      - mongo
+    links:
+      - mongo
   scrap:
     image: "scrap-main"
-
+    build:
+      context: scrapper
+      dockerfile: Dockerfile
+    ports:
+    - 8362:8362
   mongo:
     image: mongo
     ports:
