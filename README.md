@@ -30,7 +30,7 @@ The Application has 2 parts:
 clone the project in your local system using
 
 ```
-git clone https://github.com/darkSoulDeveloper/sellar_app.git
+git clone https://github.com/darkSoulDeveloper/WebScrapping.git
 ```
 
 once cloned enter the folder `WebScrapping` and build the docker images using
